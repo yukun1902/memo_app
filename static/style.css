@@ -1,0 +1,217 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #ffffff;
+  color: #222222;
+  font-family: "Hiragino Sans", "Yu Gothic UI", "Meiryo", sans-serif;
+  line-height: 1.7;
+}
+
+.container {
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 32px 16px 64px;
+}
+
+h1 {
+  margin: 0 0 24px;
+  font-size: 1.6rem;
+}
+
+h2 {
+  margin: 40px 0 12px;
+  font-size: 1.1rem;
+  color: #555555;
+}
+
+.memo-form textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #d0d0d0;
+  border-radius: 8px;
+  font: inherit;
+  resize: vertical;
+}
+
+.memo-form textarea:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
+}
+
+.form-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: 8px;
+}
+
+.error {
+  margin: 0;
+  color: #d32f2f;
+  font-size: 0.9rem;
+}
+
+button {
+  padding: 8px 24px;
+  border: none;
+  border-radius: 8px;
+  background: #3b82f6;
+  color: #ffffff;
+  font: inherit;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #2563eb;
+}
+
+button:disabled {
+  background: #9dbff8;
+  cursor: default;
+}
+
+.memo-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.memo-list li {
+  padding: 14px 16px;
+  margin-bottom: 10px;
+  border: 1px solid #e5e5e5;
+  border-radius: 8px;
+}
+
+.memo-content {
+  margin: 0;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.memo-date {
+  margin-top: 6px;
+  color: #888888;
+  font-size: 0.8rem;
+}
+
+.empty {
+  padding: 24px;
+  border: 1px dashed #d0d0d0;
+  border-radius: 8px;
+  color: #888888;
+  text-align: center;
+}
+
+.page-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 24px;
+}
+
+.page-header h1 {
+  margin: 0;
+}
+
+button.secondary {
+  border: 1px solid #3b82f6;
+  background: #ffffff;
+  color: #3b82f6;
+}
+
+button.secondary:hover {
+  background: #eff6ff;
+}
+
+button.secondary:disabled {
+  border-color: #c7d7f5;
+  background: #ffffff;
+  color: #9dbff8;
+}
+
+/* ログイン */
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  max-width: 360px;
+  margin: 24px auto 0;
+  padding: 24px;
+  border: 1px solid #e5e5e5;
+  border-radius: 8px;
+}
+
+.login-form h2 {
+  margin: 0 0 8px;
+  color: #222222;
+}
+
+.login-form label {
+  margin-top: 8px;
+  font-size: 0.9rem;
+}
+
+.login-form input {
+  padding: 10px 12px;
+  border: 1px solid #d0d0d0;
+  border-radius: 8px;
+  font: inherit;
+}
+
+.login-form input:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
+}
+
+.login-form button {
+  margin-top: 8px;
+}
+
+/* AI 要約 */
+.summary-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin: 40px 0 12px;
+}
+
+.summary-header h2 {
+  margin: 0;
+}
+
+.summary-result {
+  padding: 14px 16px;
+  border: 1px dashed #d0d0d0;
+  border-radius: 8px;
+  color: #888888;
+  font-size: 0.9rem;
+  white-space: pre-wrap;
+}
+
+.summary-result.has-result {
+  border: 1px solid #bfdbfe;
+  background: #f5f9ff;
+  color: #222222;
+  font-size: 1rem;
+}
+
+.summary-result.is-error {
+  border-color: #f5c2c2;
+  color: #d32f2f;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+}

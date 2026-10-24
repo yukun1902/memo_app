@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>メモ帳</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="container">
+    <div class="page-header">
+      <h1>メモ帳</h1>
+      <button type="button" id="logout-button" class="secondary" hidden>ログアウト</button>
+    </div>
+
+    <!-- ログイン画面 -->
+    <section id="login-view" hidden>
+      <form id="login-form" class="login-form">
+        <h2>ログイン</h2>
+        <label for="login-email">メールアドレス</label>
+        <input type="email" id="login-email" autocomplete="username" required>
+        <label for="login-password">パスワード</label>
+        <input type="password" id="login-password" autocomplete="current-password" required>
+        <p id="login-error" class="error" role="alert"></p>
+        <button type="submit" id="login-button">ログイン</button>
+      </form>
+    </section>
+
+    <!-- メモ画面（ログインした人だけ） -->
+    <div id="app-view" hidden>
+      <form id="memo-form" class="memo-form">
+        <label for="memo-input" class="visually-hidden">メモ</label>
+        <textarea id="memo-input" rows="3" maxlength="1000" placeholder="メモを入力してください"></textarea>
+        <div class="form-footer">
+          <p id="error" class="error" role="alert"></p>
+          <button type="submit" id="submit-button">登録</button>
+        </div>
+      </form>
+
+      <section class="summary">
+        <div class="summary-header">
+          <h2>AIで3行に要約</h2>
+          <button type="button" id="summary-button" class="secondary">要約する</button>
+        </div>
+        <div id="summary-result" class="summary-result" aria-live="polite">
+          「要約する」を押すと、登録したメモを AI が読んで3行にまとめます
+        </div>
+      </section>
+
+      <section>
+        <h2>メモ一覧</h2>
+        <ul id="memo-list" class="memo-list"></ul>
+        <p id="empty" class="empty" hidden>メモがありません</p>
+      </section>
+    </div>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
